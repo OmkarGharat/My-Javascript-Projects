@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="shortcut icon" href="/Icons/ig-instagram.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+        integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="common CSS.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img src="Instagram-logo.png" alt="Instagram Logo">
+            </div>
+
+            <div class="box">
+                <div class="search-box">
+                    <input type="text" id="search" name="search" placeholder="search">
+                </div>
+            </div>
+
+            <div class="icons">
+                    <div class="home">
+                        <img src="/Icons/home.png" id="home" alt="home">
+                    </div>
+                    <div class="messganger">
+                        <img src="/Icons/messanger.png" alt="messanger">
+                    </div>
+                    <div class="explore">
+                        <img src="/Icons/explore.png" id="explore" alt="explore">
+                    </div>
+                    <div class="heart activity">
+                        <img src="/Icons/heart.png" id="activity" alt="activity">
+                    </div>
+                    <div class="profile-pic">
+                        <img src="/Images/profile_pic.jpg" id="profile-pic" alt="my_profile_pic">
+                    </div>
+            </div>
+        </div>
+    </header>
+<div class="left_box">
+
+
+    <div class="container">
+        <div class="grid_container">
+            <div class="story">
+                <img src="/Images/ViratKohli.jpg" class="image" alt="Virat Kohli">
+                <div class="story_Username">
+                    <div class="insta_id">
+                        <span>virat.kohli</span>
+                    </div>
+                </div>
+            </div>
+            <div class="story">
+                <img src="/Images/shraddha.jpg" class="image" alt="Shraddha Kapoor">
+                <div class="story_Username">
+                    <div class="insta_id">
+                        <span>shraddhaK</span>
+                    </div>
+                </div>
+            </div>
+            <div class="story">
+                <img src="/Images/pikachu.jpg" class="image" alt="gamer_baba">
+                <div class="story_Username">
+                    <div class="insta_id">
+                        <span>pika_pika</span>
+                    </div>
+                </div>
+            </div>
+            <div class="story">
+                <img src="/Images/parineeti chopra.jpg" class="image" alt="Parineeti Chopra">
+                <div class="story_Username">
+                    <div class="insta_id">
+                        <span>pari.chopra</span>
+                    </div>
+                </div>
+            </div>
+            <div class="story">
+                <img src="/Images/teddy bear.jpg" class="image" alt="teddy bear">
+                <div class="story_Username">
+                    <div class="insta_id">
+                        <span>v2_teddy</span>
+                    </div>
+                </div>
+            </div>
+            <div class="story">
+                <img src="/Images/David.jpg" class="image" alt="David_Jr">
+                <div class="story_Username">
+                    <div class="insta_id">
+                        <span>David_Jr</span>
+                    </div>
+                </div>
+            </div>
+            <div class="story">
+                <img src="/Images/rcb.jpg" class="image" alt="RCB">
+                <div class="story_Username">
+                    <div class="insta_id">
+                        <span>RCB</span>
+                    </div>
+                </div>
+            </div>
+            <div class="story">
+                <img src="/Images/noDP.jpg" class="image" alt="Rohit_45">
+                <div class="story_Username">
+                    <div class="insta_id">
+                        <span>Rohit_45</span>
+                    </div>
+                </div>
+            </div>
+            <div class="story">
+                <img src="/Images/success.tip.jpg" class="image" alt="SUCCESS TIPS">
+                <div class="story_Username">
+                    <div class="insta_id">
+                        <span>SUCCESS</span>
+                    </div>
+                </div>
+            </div>
+            <div class="story">
+                <img src="/Images/thecompletefacts.jpg" id="img1" class="image" alt="Virat Kohli">
+                <div class="story_Username">
+                    <div class="insta_id">
+                        <span>completefacts</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="Insta-image-post">
+        <div class="top">
+            <div class="top-left">
+                <div class="top-left-story">
+                    <img src="/Images/time_for_knowlege.jpg" class="timeforknowlege-img" alt="timeforknowlege">
+                </div>
+            </div>
+            <div class="middle-middle">
+                <div class="middle-username">
+                    <h3>time4knowlege</h3>
+                </div>
+            </div>
+            <div class="right-right">
+                <div class="right-elipsis">
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="middle-image">
+                <img src="/Images/post.jpg" ondblclick="UpdateLikes();" id="Insta-image" alt="post.jpg">
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="FA_icons">
+                <div class="left-icons">
+                    <i class="far fa-heart" onclick="UpdateLikes();" id="like"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="fas fa-heart-broken yes" onclick="dislikeS();" id="dislike"></i>
+                </div>
+                <div class="right-icons">
+                    <i class="far fa-bookmark" id="Bkmrk" onclick="bookmark();"></i>
+                </div>
+            </div>
+            <div class="likes_and_dislikes">
+                <div class="like-by">
+                    <span id="LIKES1">50</span>
+                    <span id="str">,</span>
+                    <span id="LIKES2">351</span>
+                    <span>likes</span>
+                </div>
+                <div class="dislike-by">
+                    <span id="DISLIKE1">1</span>
+                    <span id="str">,</span>
+                    <span id="DISLIKE2">124</span>
+                    <span>dislikes</span>
+                </div>
+            </div>
+            <div class="caption">
+                <h4 class="caption-username">time4knowlege</h4>
+                <h4 class="main-caption">Spend time with your loved ones ❤️</h4>
+            </div>
+            <div class="comments-heading">
+                <span>View all 50 comments</span>
+            </div>
+            <div class="comments">
+                <div class="comment1">
+                    <h4 class="caption-username">garry_shimmar</h4>
+                    <h4>🔥🔥🔥😍😍</h4>
+                </div>
+                <div class="comment2">
+                    <h4 class="caption-username">liza_manley</h4>
+                    <h4 class="main-caption">Trueee...</h4>
+                </div>
+                <div class="comment-time">
+                    <span class="time">5 HOURS AGO</span>
+                </div>
+            </div>
+        </div>
+        <div class="comments-box">
+            <div class="emoji">
+                <img src="/Icons/smiley.png" width="30" alt="">
+            </div>
+            <div class="textArea">
+                <textarea name="" id="" cols="54" rows="1" placeholder="Add a comment ..."></textarea>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="info-div">
+
+        <div class="user_info">
+
+            <div class="user_story">
+                <div class="img">
+                    <img src="/Images/profile_pic.jpg" id="myProfilePic" alt="0mkar_7_7">
+                </div>
+
+            </div>
+            <div class="names">
+                <div class="user-Name">
+                    <span>0mkar_7_7</span>
+                </div>
+                <div class="real-Name">
+                    <span>Shree</span>
+                </div>
+            </div>
+            <div class="switch">
+                <span>switch</span>
+            </div>
+        </div>
+
+
+        <div class="suggestions">
+            <div class="suggestions_for_you">
+                <span>Suggestions for you</span>
+            </div>
+
+            <div class="see_all">
+                <span>See All</span>
+            </div>
+        </div>
+
+        <div class="new_I_acc_Suggestions">
+            <div class="new_accounts">
+                <div class="story_of_new_accounts">
+                    <div class="img">
+                        <img src="/Images/prachidesai.jpg" class="story_img" alt="0mkar_7_7">
+                    </div>
+                </div>
+                <div class="names extra">
+                    <div class="user-Name">
+                        <span>parchideasi</span>
+                    </div>
+                    <div class="real-Name">
+                        <span class="new2I">followed by Rahul_01</span>
+                    </div>
+                </div>
+                <div class="follow">
+                    <span id="follow">follow</span>
+                </div>
+            </div>
+            <div class="new_accounts">
+                <div class="story_of_new_accounts">
+                    <div class="img">
+                        <img src="/Images/CSH.jpg" class="story_img" alt="thecybersecurityhub">
+                    </div>
+                </div>
+                <div class="names extra">
+                    <div class="user-Name">
+                        <span>thecybersecurityhub</span>
+                    </div>
+                    <div class="real-Name">
+                        <span class="new2I">Suggested for you</span>
+                    </div>
+                </div>
+                <div class="follow">
+                    <span>follow</span>
+                </div>
+            </div>
+            <div class="new_accounts">
+                <div class="story_of_new_accounts">
+                    <div class="img">
+                        <img src="/Images/gamer__babaji.jpg" class="story_img" alt="0mkar_7_7">
+                    </div>
+                </div>
+                <div class="names extra">
+                    <div class="user-Name">
+                        <span>gamer__babaji</span>
+                    </div>
+                    <div class="real-Name">
+                        <span class="new2I">New to Instagram</span>
+                    </div>
+                </div>
+                <div class="follow">
+                    <span>follow</span>
+                </div>
+            </div>
+            <div class="new_accounts">
+                <div class="story_of_new_accounts">
+                    <div class="img">
+                        <img src="/Images/sunil_gavaskar.jpg" class="story_img" alt="0mkar_7_7">
+                    </div>
+                </div>
+                <div class="names extra">
+                    <div class="user-Name">
+                        <span>gavaskarsunilofficial</span>
+                    </div>
+                    <div class="real-Name">
+                        <span class="new2I">Suggested for you</span>
+                    </div>
+                </div>
+                <div class="follow">
+                    <span>follow</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+
+</html>

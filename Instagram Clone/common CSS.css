@@ -1,0 +1,67 @@
+/* ************************************************************************* */
+
+.logo,
+.box,
+.icons,
+.middle-middle,
+.FA_icons,
+.caption,
+.suggestions,
+.story_of_new_accounts {
+  display: flex;
+  align-items: center;
+}
+
+/* *************************************************************************** */
+
+.container,
+.story,
+.insta_id,
+.top-left,
+.right-elipsis,
+.follow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story,
+.image,
+.insta_id > span:hover,
+.fa-heart,
+.fa-comment,
+.fa-heart-broken,
+.fa-bookmark,
+.comments-heading > span,
+.follow > span,
+.switch > span {
+  cursor: pointer;
+}
+
+.image,
+.insta_id > span,
+.user_story #img1 {
+  transition: 500ms;
+}
+
+.container,
+.Insta-image-post,
+.info-div {
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+/* ***************************************************************************** */
+
+.image,
+.user_story #img1 {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+}
+
+.image:hover,
+.user_story #img1:hover,
+.user_story #myProfilePic:hover {
+  transform: scale(1.2);
+}
