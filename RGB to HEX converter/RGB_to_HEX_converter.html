@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB to HEX converter</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+</head>
+
+<body>
+    <div class="color-box">
+        <h1>
+            <span class="R">R</span>
+            <span class="G">G</span>
+            <span class="B">B</span>
+            <span id="to">to</span> 
+            <span class="H">H</span>
+            <span class="E">E</span>
+            <span class="X">X</span>
+        </h1>
+    </div>
+
+
+    <div class="input-box">
+        <div class="red">
+            <h2>Red</h2>
+            <input type="text" id="red" placeholder="0" minlength="3" maxlength="3" pattern="\d{3}" onkeyup="Range(this);">           
+        </div>
+
+        <div class="green">
+            <h2>Green</h2>
+            <input type="text" id="green" placeholder="0" minlength="3" maxlength="3" pattern="\d{3}" onkeyup="Range(this);">          
+        </div>
+
+        <div class="blue">
+            <h2>Blue</h2>
+            <input type="text" id="blue" placeholder="0" minlength="3" maxlength="3" pattern="\d{3}" onkeyup="Range(this);">           
+        </div>
+    </div>
+
+    <div class="hex1">     
+        <h1 id="hex-color"></h1>
+    </div>
+
+    <div class="button">
+        <button id="btn" onclick="change_bg_color();">RGB to HEX</button>    
+        <button id="copy" onclick="copyElementText('hex-color'); setTimeout(change_text,100,'copy'); setTimeout(ResetText, 1000 , 'copy');">Copy</button>
+        <button id="reset" onclick="ResetValues()">Reset</button>
+
+    </div>
+</body>
+
+</html>
