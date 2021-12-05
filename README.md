@@ -5,3 +5,5 @@ Here , I will Upload My all Javascript projects
 ### 2. RGB to HEX Converter
 ### 3. Simple Counter
 ### 4. Stopwatch ⏱ 
+### 5. HEX to RGB COnverter
+### 6. Change Background HEX color
