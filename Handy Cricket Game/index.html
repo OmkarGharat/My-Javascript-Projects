@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Handy Cricket</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="COMMON CSS.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="heading">Handy Cricket</h1>
+  </div>
+
+  <div class="box play_box">
+    <div class="row1">
+      <div class="user">
+        <h2>Player's Runs</h2>
+        <span id="playerRun">0</span>
+      </div>
+      <div class="computer">
+        <h2>Computer's Score</h2>
+        <span id="computerRuns">0</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="UserRuns">
+    <div class="row2">
+      <div class="runs">0</div>
+      <div class="runs">1</div>
+      <div class="runs">2</div>
+      <div class="runs">3</div>
+      <div class="runs">4</div>
+      <div class="runs">5</div>
+      <div class="runs">6</div>
+    </div>
+  </div>
+
+  <div class="msg">
+    <div class="box">
+      <h4 class="msg_box"></h4>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="total">
+      <span>Total Runs : </span>
+      <span class="totalRuns span"></span>
+    </div>
+    <div class="total">
+      <span>Balls faced : </span>
+      <span class="ballsfaced span"></span>
+    </div>
+    <div class="total">
+      <span>Strike Rate : </span>
+      <span class="strikeRate span"></span>
+    </div>
+    <div class="total">
+      <span> Fours (4's) : </span>
+      <span class="fours span"></span>
+    </div>
+    <div class="total">
+      <span> Sixes (6's) &nbsp; : </span>
+      <span class="sixes span"></span>
+    </div>
+    <div class="total">
+      <button class="btn">Reset</button>
+    </div>
+  </div>
+
+  <script src="logic.js"></script>
+</body>
+
+</html>

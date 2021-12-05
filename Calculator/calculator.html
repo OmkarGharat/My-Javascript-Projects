@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script src="https://kit.fontawesome.com/64a25bebb0.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Calculator</h1>
+    </div>
+    <div class="calculator">
+        <div class="input-box">
+            <input type="text" id="input">
+            <div class="number-box">
+                <h1 class="number btn clear" onclick="Clear()">C</h1>
+                <h1 class="number" onclick="plus_minus()">+/-</h1>
+                <h1 class="number fas fa-backspace" onclick="backspace()"></h1>
+                <h1 class="number fas fa-plus" onclick="keys('+')"></h1>
+
+                <h1 class="number btn" onclick="keys(7)">7</h1>
+                <h1 class="number btn" onclick="keys(8)">8</h1>
+                <h1 class="number btn" onclick="keys(9)">9</h1>
+                <h1 class="number fas fa-minus" onclick="keys('-')" id="minus"></h1>
+
+                <h1 class="number btn" onclick="keys(4)">4</h1>
+                <h1 class="number btn" onclick="keys(5)">5</h1>
+                <h1 class="number btn" onclick="keys(6)">6</h1>
+                <h1 class="number fas fa-star-of-life" onclick="keys('*')" id="multiply"></h1>
+
+                <h1 class="number btn" onclick="keys(1)">1</h1>
+                <h1 class="number btn" onclick="keys(2)">2</h1>
+                <h1 class="number btn" onclick="keys(3)">3</h1>
+                <h1 class="number fas fa-divide" onclick="keys('/')"></h1>
+
+                <h1 class="number btn" id="zero" onclick="keys(0)">0</h1>
+                <h1 class="number btn" onclick="keys('.')">.</h1>
+                <h1 class="number fas fa-equals" id="equal" onclick="equalTo()"></h1>
+
+            </div>
+        </div>
+
+        <script src="logic.js"></script>
+
+</body>
+
+</html>

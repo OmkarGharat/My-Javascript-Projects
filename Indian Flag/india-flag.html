@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Flag</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .flag {
+            width: 290px;
+            height: 180px;
+            margin-top: 5rem;
+            box-shadow: 7px 6px 12px -3px rgba(0, 0, 0, 0.74);
+        }
+
+        .top {
+            height: 60px;
+            background-color: #ff9a30;
+        }
+
+        .middle {
+            height: 60px;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .wheel {
+            position: relative;
+            width: 45px;
+            height: 45px;
+            border: 1px solid #000089;
+            border-radius: 45px;
+            animation-name: wheel;
+            animation-iteration-count: infinite;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+        }
+
+        .lines {
+            width: 1px;
+            background-color: #000089;
+            position: absolute;
+            left: 49%;
+            height: 100%;           
+        }
+
+        @keyframes wheel{
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .bottom {
+            height: 60px;
+            background-color: #0a8901;
+        }
+
+
+        .lines:nth-child(1) {
+            transform: rotate(15deg);
+        }
+
+        .lines:nth-child(2) {
+            transform: rotate(30deg);
+        }
+
+        .lines:nth-child(3) {
+            transform: rotate(45deg);
+        }
+
+        .lines:nth-child(4) {
+            transform: rotate(60deg);
+        }
+
+        .lines:nth-child(5) {
+            transform: rotate(75deg);
+        }
+
+        .lines:nth-child(6) {
+            transform: rotate(90deg);
+        }
+
+        .lines:nth-child(7) {
+            transform: rotate(105deg);
+        }
+
+        .lines:nth-child(8) {
+            transform: rotate(120deg);
+        }
+
+        .lines:nth-child(9) {
+            transform: rotate(135deg);
+        }
+
+        .lines:nth-child(10) {
+            transform: rotate(150deg);
+        }
+
+        .lines:nth-child(11) {
+            transform: rotate(165deg);
+        }
+
+        .lines:nth-child(12) {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flag">
+        <div class="top"></div>
+        <div class="middle">
+            <div class="wheel">
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+                <div class="lines"></div>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+</body>
+
+</html>

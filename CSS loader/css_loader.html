@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Loader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+        }
+
+        .circle {
+            width: 18%;
+            margin: 2rem 0 0 34rem;
+        }
+
+        h1 {
+            margin: 2rem;
+            border-top: 10px solid white;
+            border-radius: 140px;
+            padding: 5rem 0;
+            animation: rotate 1s linear infinite;
+        }
+
+        .loader1,
+        .loader2 {
+            display: inline-block;
+            border-radius: 50%;
+            width: 10rem;
+            height: 10rem;
+        }
+
+        .loader1 {
+            border: 16px solid white;
+            border-top: 16px solid rgb(0, 183, 255);
+            animation: rotate 1.5s linear infinite;
+
+        }
+
+        .loader2 {
+            border-top: 16px solid rgb(255, 0, 0);
+            border-bottom: 16px solid rgb(68, 0, 255);
+            margin-left: 1rem;
+            animation: rotate 1.5s linear infinite;
+        }
+
+        .top {
+            margin-top: -12.5rem;
+            margin-left: 2rem;
+        }
+
+        @keyframes rotate {
+
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="circle">
+        <h1 class="moon"></h1>
+    </div>
+
+    <div class="top">
+        <div class="loader1"></div>
+        <div class="loader2"></div>
+    </div>
+</body>
+
+</html>

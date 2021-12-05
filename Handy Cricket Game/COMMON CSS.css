@@ -1,0 +1,36 @@
+.row1,
+.row2,
+.span,
+.total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+}
+
+.container,
+.user,
+.computer,
+.runs,
+.msg {
+  text-align: center;
+}
+
+.container,
+.runs,
+.stats {
+  background: #1c1c1c;
+}
+
+.user,
+.computer,
+.user > h2,
+.computer > h2,
+.UserRuns,
+.stats {
+  font-family: "Open Sans", sans-serif;
+}

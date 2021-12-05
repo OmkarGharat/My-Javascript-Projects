@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradient Generator</title>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>A linear <span>Gradient</span> Generator</h2>
+        <div id="box">
+            <input type="color" name="color-gradient-1" id="color1" value="#ff0000"
+                oninput="Gradient_Directions('right')" />
+            <input type="color" name="color-gradient-2" id="color2" value="#0000ff"
+                oninput="Gradient_Directions('right')" />
+        </div>
+        <div class="directions">
+            <button class="arrows ph-arrow-right" onclick="Gradient_Directions('right')"></button>
+            <button class="arrows ph-arrow-left" onclick="Gradient_Directions('left')"></button>
+            <button class="arrows ph-arrow-up" onclick="Gradient_Directions('top')"></button>
+            <button class="arrows ph-arrow-down" onclick="Gradient_Directions('bottom')"></button>
+            <button class="arrows ph-arrow-up-left" onclick="Gradient_Directions('top right')"></button>
+            <button class="arrows ph-arrow-up-right" onclick="Gradient_Directions('top left')"></button>
+            <button class="arrows ph-arrow-down-left" onclick="Gradient_Directions('bottom left')"></button>
+            <button class="arrows ph-arrow-down-right" onclick="Gradient_Directions('bottom right')"></button>
+        </div>
+        <div class="output-value">
+            <h1 id="gradient-color">linear-gradient(to right, #ff0000, #0000ff)</h1>
+            <button id="copy" class="copy-btn"
+                onclick="copyElementText('gradient-color'); setTimeout(change_text,0,'copy')">Copy</button>
+        </div>
+    </div>
+    <script src="logic.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right,#b8b8b8, #b5b5b5);   
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+#box {
+    background-color: #fff;
+    width: 200px;
+    height: 50px;
+    position: relative;
+}
+
+input {
+    width: 50px;
+    height: 50px;
+    border-color: black;
+    color: black;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.output-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {  
+    background-color: #1A1A1A;
+    color: #FFDD00;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+h1,
+button {
+    margin-top: 2rem;
+}
+
+h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-family: 'Be Vietnam Pro', sans-serif;
+     color: #fff; 
+     background-color: #242424; 
+     padding: 1rem 2rem; 
+     border-radius: 10px;
+}
+
+#color2 {
+    position: absolute;
+    top: 0;
+    left: 9.6rem;
+}
+
+button {
+    margin: 2rem 0 0 1rem;
+    padding: .7rem 1.3rem;
+    font-size: 1.5rem;
+    background-color: #171717;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    transition: all .7s 0s ease;
+}
+
+.copy-btn {
+    background-color: #171717;
+    color: #FFDD00;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+}
+
+.arrows {
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    background-color: #1F1F1F;
+    color: #fafafa;
+}
+
+.arrows:hover {
+    background-color: #1b051f;
+}
+
+span {
+    background: linear-gradient(to right, #ff0000 15%, #FFA600 25%, #ffff00 40%, #00FF00 55%, #00e1ff 75%, #d6a2fc 85%, #ba60ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-color: #00b7ff;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
