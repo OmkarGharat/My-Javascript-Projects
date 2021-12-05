@@ -1,6 +1,6 @@
 let currentTime = () => {
 
-    let timer = document.getElementById('timer');
+    let timer = document.getElementById('timer'); 
 
     let time = new Date();
     let hour = time.getHours(); // 0 - 23
