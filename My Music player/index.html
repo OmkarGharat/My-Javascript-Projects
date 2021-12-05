@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MusiCAA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css"
+    integrity="sha512-BnbUDfEUfV0Slx6TunuB042k9tuKe3xrD6q4mg5Ed72LTgzDIcLPxg6yI2gcMFRyomt+yJJxE+zJwNmxki6/RA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="Common CSS.css" />
+  <link rel="shortcut icon" href="/Images/favicon.PNG" type="image/x-icon">
+  <link href="https://api.fontshare.com/css?f[]=general-sans@400&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="container">
+    <div class="mobile_ui">
+      <div class="left_part">
+        <div class="navbar">
+          <div class="heading">
+            <span>MusiCAA</span>
+          </div>
+        </div>
+        <div class="song_list">
+          <div class="songs">
+            <img src="/cover1.jpg" alt="cover image" />
+            <div class="song_details">
+              <div class="song_name change play">
+                <span id="0">Rivals at FireFight</span>
+              </div>
+            </div>
+          </div>
+          <div class="songs">
+            <img src="/Images/Atif aslam.jpg" alt="cover image" />
+            <div class="song_details">
+              <div class="song_name change play">
+                <span id="1">Dil Yeh Dancer </span>
+              </div>
+            </div>
+          </div>
+          <div class="songs">
+            <img src="/Images/cover3.jpg" alt="cover image" />
+            <div class="song_details">
+              <div class="song_name change play">
+                <span id="2">Taang Uthake</span>
+              </div>
+            </div>
+          </div>
+          <div class="songs">
+            <img src="/Images/cover1.jpg" alt="cover image" />
+            <div class="song_details">
+              <div class="song_name change play">
+                <span id="3">KGF : Sultan</span>
+              </div>
+            </div>
+          </div>
+          <div class="songs">
+            <img src="/Images/cover2.jpg" alt="cover image" />
+            <div class="song_details">
+              <div class="song_name change play">
+                <span id="4">Sau Tarah ke </span>
+              </div>
+            </div>
+          </div>
+          <div class="songs">
+            <img src="/Images/Atif aslam.jpg" alt="cover image" />
+            <div class="song_details">
+              <div class="song_name change play">
+                <span id="5">Tere Liye</span>
+              </div>
+            </div>
+          </div>
+          <div class="songs">
+            <img src="/Images/cover3.jpg" alt="cover image" />
+            <div class="song_details">
+              <div class="song_name change play">
+                <span id="6">Tera Chehra</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right_part">
+        <div class="navbar">
+          <div class="playing">
+            <span>Playing Now</span>
+          </div>
+        </div>
+        <div class="album">
+          <div class="album_pic">
+            <img src="/Images/MusiCAA-logo-white.png" id="track_art" alt="cover image" />
+          </div>
+
+          <div class="album_bg">
+            <div class="album_details">
+              <div class="SongName">
+                <span class="SName">Song</span>
+              </div>
+              <div class="SingerName">
+                <span class="Musician_Name">Singer Name</span>
+              </div>
+              <div class="progress-container" id="progress-container">
+                <div class="progress" id="progress"></div>
+              </div>
+              <div class="icons">
+                <div class="previous_song">
+                  <i class="fas fa-backward" id="previous_track"></i>
+                </div>
+                <div class="play_pause">
+                  <i class="fas fa-play-circle" id="play" onclick="Play_or_pause()"></i>
+                </div>
+                <div class="next_song">
+                  <i class="fas fa-forward" id="next_track"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="logic.js"></script>
+</body>
+
+</html>

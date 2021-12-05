@@ -1,0 +1,59 @@
+.navbar,
+.song_name,
+.logo,
+.album_pic,
+.song_list,
+.SongName,
+.SingerName,
+.seekBar,
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container,
+.album_details {
+  display: flex;
+  justify-content: center;
+}
+
+.mobile_ui,
+.song_details,
+.songs {
+  display: flex;
+}
+
+.song_list,
+.album_details {
+  flex-direction: column;
+}
+
+.fa-play-circle,
+.fa-pause-circle,
+.fa-backward,
+.fa-forward {
+  font-size: 1.5rem;
+  color: #00ffa9;
+}
+
+.fa-backward,
+.fa-forward,
+.fa-play-circle,
+.song_name > span,
+.progress-container {
+  cursor: pointer;
+}
+
+@media (max-width : 701px){
+
+  .mobile_ui{
+    flex-direction: column;
+     align-items: center;
+  }
+
+  .left_part{
+    margin: 0 0 2rem 0;
+  }
+
+}

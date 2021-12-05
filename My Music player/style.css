@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff8e4;
+}
+
+.container {
+  margin-top: 3rem;
+}
+
+.mobile_ui {
+  width: 700px;
+  height: 520px;
+}
+
+.left_part {
+  width: 350px;
+  height: 540px;
+  margin-right: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px -1px 12px 0px,rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  border-radius: 1.25rem;
+}
+
+.right_part {
+  width: 350px;
+  height: 540px;
+}
+
+.navbar {
+  height: 70px;
+  border-radius: 1.25rem 1.25rem 0 0;
+  background: #000000;
+  color: rgb(255, 232, 232);
+}
+
+.heading > span {
+  font-family: "General Sans", sans-serif;
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+}
+
+.playing > span {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.song_list {
+  height: 470px;
+  z-index: -1;
+  border-radius: 0 0 1.25rem 1.25rem;
+  font-family: "Poppins", sans-serif;
+  color: aliceblue;
+  background: linear-gradient(to bottom, #0d4314, #0b230c);  
+}
+
+.songs {
+  height: 54px;
+  border: 2px solid rgb(64, 233, 50);
+  margin: 0 0 10px 0;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.songs > img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.song_details {
+  justify-content: space-around;
+  align-items: center;
+  height: 54px;
+}
+
+.song_name {
+  width: 230px;
+  height: 45px;
+}
+
+.logo {
+  height: 50px;
+}
+
+.album_pic {
+  height: 262px;
+  background: linear-gradient(to bottom, #277b31, #0b230c);
+}
+
+.album_details {
+  color: aliceblue;
+  background: linear-gradient(to bottom, #103214, #0b230c);
+  border-radius: 0 0 1.25rem 1.25rem;
+  font-family: "Poppins", sans-serif;
+  height: 208px;
+}
+
+.album_pic > img {
+  width: 100%;
+  height: 262px;
+}
+
+/* ********************************************************** */
+
+.SongName {
+  height: 50px;
+  font-size: 1.5rem;
+  color: #00ffa9;
+}
+
+.SingerName {
+  height: 30px;
+  font-size: 1.2rem;
+  color: #82b9a7;
+}
+
+.icons {
+  height: 72px;
+}
+
+.progress-container {
+  background: #fff;
+  border-radius: 5px;
+  margin: 1rem auto 10px auto;
+  height: 6px;
+  width: 88%;
+}
+
+/* styling the actual progress bar and making it flow along with the song*/
+
+.progress {
+  background-color: #ff4b00;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s cubic-bezier(1, 0.11, 1, 1);
+}
+
+#play {
+  margin: 0 2rem;
+  font-size: 2.5rem !important;
+}
