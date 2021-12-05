@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(24, 24, 24);
+    font-family: 'Aldrich', sans-serif;
+}
+
+.time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#timer {
+    color: rgb(255, 251, 3);
+    display: inline;
+    font-size: 4.5rem;
+    font-weight: 100;
+}
