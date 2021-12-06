@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Antique&display=swap');
+
+.box{
+    height: 80px;    
+    box-shadow: 0 0 1rem -0.09rem rgb(10 10 10 / 28%), 0 0 0 1px rgb(10 10 10 / 2%);
+}
+
+button{
+    width: 16rem;
+}
+
+.main_container{
+    margin: 2rem;
+}
+
+.container{
+    padding: 1rem;
+}
+
+h1{
+    font-family: 'Zen Antique', serif;
+}
+
+h3{
+    width: 285px;
+    padding: 5px;
+}
+
+.col{
+    margin: 0 1rem 2rem 0;
+    max-width: 377px !important;
+    box-shadow: 0 0 1em -0.125em rgb(10 10 10 / 42%), 0 0 0 1px rgb(10 10 10 / 2%);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width : 1000px) and (max-width : 1200px){
+
+    .rows{
+        grid-template-columns: repeat(2 , 1fr) !important;
+    }
+
+}
+
+@media (max-width : 420px){
+
+    .main_container {
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        grid-gap: 10px;
+    }
+
+    .row{
+        display: flex;
+    }
+
+}
+
+/* 
+
+box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%);
+
+box-shadow: 0 0 1rem -0.09rem rgb(10 10 10 / 28%), 0 0 0 1px rgb(10 10 10 / 2%);
+
+color: #4a4a4a;
+
+background-color: #485fc7; */
