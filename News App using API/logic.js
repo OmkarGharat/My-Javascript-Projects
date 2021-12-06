@@ -5,7 +5,7 @@ const main_part = document.querySelector('.columns .main_part');
 const row = document.querySelector('.row');
 
 
-const API_key = "648d8bf3e1c04c90934df194bcff3d77";
+const API_key = "Enter_your_API_KEY_here";
 
 
 window.addEventListener('load', () => {
