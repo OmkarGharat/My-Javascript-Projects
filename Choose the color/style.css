@@ -1,83 +1,114 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: #000000;
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
-.container,
-.heading,
-.color {
-    display: flex;
-    justify-content: center;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .container {
-    flex-direction: column;
-    align-items: center;
+  width: 90%;
+  max-width: 600px;
+  background-color: #1e2a38;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  text-align: center;
 }
 
-.heading {
-    font-size: 1.5rem;
-    margin: 1rem 0;
-    color: #fff;
+.header h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #00fff2;
 }
 
-#heading {
-    margin-right: 1rem;
-}
-
-#random-color {
-    padding: 0 0 10px 10px;
+.info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .color-box {
-    display: grid;
-    width: 500px;
-    height: 450px;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 100px);
-    grid-gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .color {
-    align-items: center;
-    border-radius: 10px;
-    cursor: pointer;
+  padding: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.3s;
+  border: none;
+  color: #000;
 }
 
-#yellow {
-    color: rgb(255, 0, 149);
-    background-color: rgb(251, 255, 0);
+.color:hover {
+  transform: scale(1.05);
+/*   box-shadow: 0 0 10px #fff; */
 }
 
-.green {
-    color: #ff0000;
-    background-color: rgb(0, 255, 42);
-}
+/* RED SHADES */
+.Crimson { background-color: Crimson; color: white; }
+.Scarlet { background-color: #FF2400; color: white; }
+.Salmon { background-color: Salmon; color: black; }
+.Coral { background-color: Coral; color: black; }
+.Maroon { background-color: Maroon; color: white; }
+.Burgundy { background-color: #800020; color: white; }
 
-#pink {
-    color: yellow;
-    background-color: rgb(255, 43, 202);
-}
+/* GREEN SHADES */
+.Olive { background-color: Olive; color: white; }
+.Chartreuse { background-color: Chartreuse; color: black; }
+.LimeGreen { background-color: LimeGreen; color: white; }
+.SeaGreen { background-color: SeaGreen; color: white; }
+.Teal { background-color: Teal; color: white; }
+.Turquoise { background-color: Turquoise; color: black; }
 
-.blue {
-    color: #ffffff;
-}
+/* BLUE SHADES */
+.SkyBlue { background-color: SkyBlue; color: black; }
+.DodgerBlue { background-color: DodgerBlue; color: white; }
+.SlateBlue { background-color: SlateBlue; color: white; }
+.Indigo { background-color: Indigo; color: white; }
+.Navy { background-color: Navy; color: white; }
+.Periwinkle { background-color: #CCCCFF; color: black; }
 
-.red {
-    color: rgb(131, 255, 114);
-    background-color: rgb(255, 0, 0);
-}
+/* PURPLE SHADES */
+.Lavender { background-color: Lavender; color: black; }
+.Plum { background-color: Plum; color: black; }
+.Orchid { background-color: Orchid; color: black; }
+.Violet { background-color: Violet; color: black; }
+.Magenta { background-color: Magenta; color: black; }
+.Fuchsia { background-color: Fuchsia; color: black; }
+
+/* BROWN/NEUTRALS */
+.Sienna { background-color: Sienna; color: white; }
+.Tan { background-color: Tan; color: black; }
+.Chocolate { background-color: Chocolate; color: white; }
+.Beige { background-color: Beige; color: black; }
+.Moccasin { background-color: Moccasin; color: black; }
+.GoldenRod { background-color: GoldenRod; color: black; }
+
 
 .ans {
-    margin: 1rem;
+  margin-top: 2rem;
 }
 
 #output {
-    color: rgb(0, 195, 255);
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #00ffff;
 }
