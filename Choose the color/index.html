@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Choose the color Game</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Color Match Game</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <div class="container">
-        <div class="heading">
-            <h1 id="heading">Choose the Color : </h1>
-            <h1 id="random-color"></h1>
-        </div>
-
-        <div class="color-box">
-            <h1 class="color" id="pink" onclick="YELLOW(yellow)">Pink</h1>
-            <h1 class="color red" onclick="GREEN(green)">Red</h1>
-            <h1 class="color" id="yellow" onclick="PINK(pink)">yellow</h1>
-
-            <h1 class="color red" onclick="GREEN(green)">Red</h1>
-            <h1 class="color" id="yellow" onclick="PINK(pink)">yellow</h1>
-            <h1 class="color green" onclick="RED(red)">Green</h1>
-
-            <h1 class="color" id="yellow" onclick="PINK(pink)">yellow</h1>
-            <h1 class="color green" onclick="RED(red)">Green</h1>
-            <h1 class="color" id="pink" onclick="YELLOW(yellow)">Pink</h1>
-
-            <h1 class="color" id="pink" onclick="YELLOW(yellow)">Pink</h1>
-            <h1 class="color red" onclick="GREEN(green)">Red</h1>
-            <h1 class="color green" onclick="RED(red)">Green</h1>
-
-        </div>
-
-        <div class="ans">
-            <h1 id="output"></h1>
-        </div>
+  <div class="container">
+    <div class="header">
+      <h1>🎨 Color Match Game</h1>
+      <div class="info">
+        <p><strong>Target Color:</strong> <span id="random-color"></span></p>
+        <p><strong>Score:</strong> <span id="score">0</span></p>
+        <p><strong>Lives:</strong> <span id="lives">3</span></p>
+        <p><strong>Time Left:</strong> <span id="timer">10</span> sec</p>
+      </div>
     </div>
 
-    <script src="logic.js"></script>
+    <div class="color-box" id="color-box">
+      <!-- Buttons will be injected dynamically -->
+    </div>
 
+    <div class="ans">
+      <h2 id="output"></h2>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
