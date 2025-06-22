@@ -1,45 +1,50 @@
-let to_do_list = () => {
+function to_do_list() {
+    const input = document.getElementById("input");
+    const taskText = input.value.trim();
+    const ul = document.getElementById("myUL");
 
-    let ul = document.getElementById('myUL');
-    let li = document.createElement('li');
-    let input_value = document.getElementById('input').value;
-
-    let text_value = document.createTextNode(input_value);
-    li.appendChild(text_value);
-
-    let delBtn = document.createElement('i');
-    delBtn.classList.add("fas", "fa-trash");
-    li.appendChild(delBtn);
-
-    delBtn.addEventListener('click', () => {
-        
-        confirmation = confirm('Are you sure do you want to delete ? ');
-
-        if (confirmation) {
-            li.remove();
-        }
-
-    });
-
-    let completeBtn = document.createElement('i');
-    completeBtn.classList.add("fas", "fa-check");
-    li.appendChild(completeBtn);
-
-    completeBtn.addEventListener('click', () => {
-
-        li.style.backgroundColor = "#1b173f";
-        li.style.textDecoration = "line-through";
-        completeBtn.style.color = "#5cff70";
-        delBtn.style.color = "#ff7171";
-
-    });
-
-    if (input_value == "") {
-        alert('Task cannot be empty');
-    } else {
-        ul.appendChild(li);
+    if (!taskText) {
+        alert("Please enter a task!");
+        return;
     }
 
-    document.getElementById("input").value = "";
+    // Create list item
+    const li = document.createElement("li");
+    li.className = "list-group-item d-flex justify-content-between align-items-center";
 
-};
+    // Add task text
+    li.innerHTML = `<span class="task-text">${taskText}</span>`;
+
+    // Trash icon
+    const delBtn = document.createElement("i");
+    delBtn.classList.add("fas", "fa-trash", "text-danger", "me-2");
+    delBtn.title = "Delete Task";
+    delBtn.addEventListener("click", () => {
+        const confirmDel = confirm("Are you sure you want to delete this task?");
+        if (confirmDel) {
+            li.remove();
+        }
+    });
+
+    // Complete icon
+    const completeBtn = document.createElement("i");
+    completeBtn.classList.add("fas", "fa-check", "text-success");
+    completeBtn.title = "Mark as Done";
+    completeBtn.addEventListener("click", () => {
+        li.classList.toggle("completed");
+    });
+
+    // Button container
+    const btnGroup = document.createElement("div");
+    btnGroup.classList.add("btn-group");
+    btnGroup.appendChild(completeBtn);
+    btnGroup.appendChild(delBtn);
+
+    li.appendChild(btnGroup);
+
+    // Append to list
+    ul.appendChild(li);
+
+    // Clear input
+    input.value = "";
+}
