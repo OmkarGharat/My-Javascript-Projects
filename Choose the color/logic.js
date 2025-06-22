@@ -1,65 +1,123 @@
-let random_color = document.getElementById('random-color');
-let output = document.getElementById('output');
-let pink = document.getElementById('yellow'); // yellow color      
-let yellow = document.getElementById('pink'); // pink color    
-let green = document.getElementById('red'); // red color    
-let red = document.getElementById('green'); // pink color    
-let blue = document.getElementById('white'); // white color    
+const colors = [
+  'Crimson', 'Scarlet', 'Salmon', 'Coral', 'Maroon', 'Burgundy',
+  'Olive', 'Chartreuse', 'LimeGreen', 'SeaGreen', 'Teal', 'Turquoise',
+  'SkyBlue', 'DodgerBlue', 'SlateBlue', 'Indigo', 'Navy', 'Periwinkle',
+  'Lavender', 'Plum', 'Orchid', 'Violet', 'Magenta', 'Fuchsia',
+  'Sienna', 'Tan', 'Chocolate', 'Beige', 'Moccasin', 'GoldenRod'
+];
 
 
-let arr = ['pink', 'yellow', 'green', 'red'];
-let color_picker = arr[Math.floor(Math.random() * arr.length)];
-random_color.innerHTML = color_picker;
+const randomColorText = document.getElementById('random-color');
+const output = document.getElementById('output');
+const scoreDisplay = document.getElementById('score');
+const livesDisplay = document.getElementById('lives');
+const timerDisplay = document.getElementById('timer');
+const colorBox = document.getElementById('color-box');
 
-let pink_color = document.body.style.color = "pink";
-let yellow_color = document.body.style.color = "yellow";
-let green_color = document.body.style.color = "green";
-let red_color = document.body.style.color = "red";
-let blue_color = document.body.style.color = "blue";
+let score = 0;
+let lives = 3;
+let timeLeft = 10;
+let targetColor = '';
+let timer;
 
+// INIT
+startNewRound();
 
-function PINK(pink) {
-    if (color_picker == pink_color) {
-        output.innerHTML = "Correct ✔️ !! You guessed it correctly";
-    }
-    else {
-        output.innerHTML = "Wrong ❌ guess ! ";
-    }
+// Create color buttons dynamically
+function renderColorButtons() {
+  colorBox.innerHTML = '';
+
+  const displayedLabels = shuffle([...colors]).slice(0, 9); // 9 random color names
+  const displayedColors = shuffle([...colors]).slice(0, 9); // 9 random colors for background
+
+  // Pick target from one of the displayed LABELS
+  targetColor = displayedLabels[Math.floor(Math.random() * displayedLabels.length)];
+  randomColorText.textContent = targetColor;
+
+  for (let i = 0; i < 9; i++) {
+    const btn = document.createElement('button');
+
+    const label = displayedLabels[i];
+    const bgColorClass = displayedColors[i];
+
+    btn.textContent = label;
+    btn.className = `color ${bgColorClass}`;
+    btn.setAttribute('data-color', label);
+
+    btn.addEventListener('click', handleColorClick);
+    colorBox.appendChild(btn);
+  }
 }
 
-function YELLOW(yellow) {
-    if (color_picker == yellow_color) {
-        output.innerHTML = "Correct ✔️ !! You guessed it correctly";
-    }
-    else {
-        output.innerHTML = "Wrong ❌ guess ! ";
-    }
+function startNewRound() {
+  targetColor = getRandomColor();
+  randomColorText.textContent = targetColor;
+  renderColorButtons();
+  resetTimer();
 }
 
-function GREEN(green) {
-    if (color_picker == green_color) {
-        output.innerHTML = "Correct ✔️ !! You guessed it correctly";
-    }
-    else {
-        output.innerHTML = "Wrong ❌ guess ! ";
-    }
+function getRandomColor() {
+  return colors[Math.floor(Math.random() * colors.length)];
 }
 
-function RED(red) {
-    if (color_picker == red_color) {
-        output.innerHTML = "Correct ✔️ !! You guessed it correctly";
-    }
-    else {
-        output.innerHTML = "Wrong ❌ guess ! ";
-    }
+function handleColorClick(e) {
+  const selectedColor = e.target.getAttribute('data-color');
+  clearInterval(timer); // Stop old timer
+
+  if (selectedColor === targetColor) {
+    score++;
+    output.textContent = "Correct ✔️ !! You guessed it!";
+  } else {
+    lives--;
+    output.textContent = `Wrong ❌! It was "${targetColor}"`;
+  }
+
+  updateStatus();
+
+  if (lives <= 0) {
+    gameOver();
+  } else {
+    setTimeout(startNewRound, 1000);
+  }
 }
 
-function BLUE(blue) {
-    if (color_picker == blue_color) {
-        output.innerHTML = "Correct ✔️ !! You guessed it correctly";
-    }
-    else {
-        output.innerHTML = "Wrong ❌ guess ! ";
-    }
+function updateStatus() {
+  scoreDisplay.textContent = score;
+  livesDisplay.textContent = lives;
 }
 
+function resetTimer() {
+  timeLeft = 10;
+  timerDisplay.textContent = timeLeft;
+  timer = setInterval(() => {
+    timeLeft--;
+    timerDisplay.textContent = timeLeft;
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      lives--;
+      output.textContent = `⏰ Time’s up! The color was "${targetColor}"`;
+      updateStatus();
+
+      if (lives <= 0) {
+        gameOver();
+      } else {
+        setTimeout(startNewRound, 1000);
+      }
+    }
+  }, 1000);
+}
+
+function gameOver() {
+  output.textContent = `💔 Game Over! Your Score: ${score}`;
+  colorBox.innerHTML = '';
+  randomColorText.textContent = '—';
+}
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
